@@ -35,7 +35,7 @@ function handleLogin(event) {
     const password = document.getElementById("password").value;
 
     // 簡易パスワードのチェック（仮のパスワード：password123）
-    if (password === "password123") {
+    if (password === "wakakusa") {
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
         createBoardUI(username);
