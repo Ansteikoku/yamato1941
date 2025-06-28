@@ -32,9 +32,9 @@ function createLoginUI() {
 function handleLogin(event) {
     event.preventDefault();
     const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+    const password = document.getElementById("password").value.trim();  // 余分な空白を削除
 
-    // 簡易パスワードのチェック（仮のパスワード：wakakusa）
+    // パスワードのチェック（新しいパスワード: "wakakusa"）
     if (password === "wakakusa") {
         localStorage.setItem("isAuthenticated", "true");
         localStorage.setItem("username", username);
